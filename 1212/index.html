@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> 仿QQ空间相册 </title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #main{
+        width:1000px;
+        margin:auto;
+        }
+        #smallpic{
+        height:120px; 
+        }
+        img{
+        float:left; 
+        margin-right:10px; 
+        margin-bottom:10px;
+        }
+        #smallpic img:hover{
+            cursor:pointer; /*设定鼠标的形状为小手*/
+        }
+        .pb{
+         border:3px solid #14c3fd;
+        } 
+    </style>
+    <script type="text/javascript">
+        var img0 = document.getElementById('smallpic').childNodes;
+        var img1 = document.getElementById('bigpic');
+        var img2 = childNodes[0];
+        var img3 = childNodes[1];
+        var img4 = childNodes[2];
+        var img5 = childNodes[3];
+        var img6 = childNodes[4];
+
+        function showBig(){
+            //1. 依次获得div中的所有节点
+            var div = document.getElementById('bigpic');
+            for (var i=0; i<div.childNodes.length; ++i)
+            {
+                var img = div.childNodes[i];
+            }
+            //2. 修改节点属性
+            img.src = "images/2.jpg";
+        }
+
+    </script>
+    
+</head>
+
+<body>
+    <div id="main">
+        <div id="smallpic">
+            <img src="images/s2.jpg" width="180" height="100" onclick="showBig()" />
+            <img src="images/s3.jpg" width="180" height="100" onclick="showBig()" />
+            <img src="images/s4.jpg" width="180" height="100" onclick="showBig()"/>
+            <img src="images/s5.jpg" width="180" height="100" onclick="showBig()"/>
+            <img src="images/s6.jpg" width="180" height="100" onclick="showBig()"/>
+        </div>
+        <div >
+            <img id="bigpic" src="images/s1.jpg" width="940px" />
+        </div>
+    </div>
+</body>
+</html>
