@@ -24,25 +24,40 @@
         } 
     </style>
     <script type="text/javascript">
-        var img0 = document.getElementById('smallpic').childNodes;
-        var img1 = document.getElementById('bigpic');
-        var img2 = childNodes[0];
-        var img3 = childNodes[1];
-        var img4 = childNodes[2];
-        var img5 = childNodes[3];
-        var img6 = childNodes[4];
 
-        function showBig(){
-            //1. 依次获得div中的所有节点
-            var div = document.getElementById('bigpic');
-            for (var i=0; i<div.childNodes.length; ++i)
-            {
-                var img = div.childNodes[i];
-            }
-            //2. 修改节点属性
-            img.src = "images/2.jpg";
+        function showBig1(){
+            
+            
+            var div3 = document.getElementById('bigpic');
+            var img1 = document.getElementById('smallpic').children[0];
+            img1.style.border = "3px yellow solid";
+            div3.src = img1.src;
+
         }
-
+        function showBig2(){
+            var div3 = document.getElementById('bigpic');
+            var img2 = document.getElementById('smallpic').children[1];
+            img2.style.border = "3px yellow solid";
+            div3.src = img2.src;
+        }
+        function showBig3(){
+            var div3 = document.getElementById('bigpic');
+            var img3 = document.getElementById('smallpic').children[2];
+            img3.style.border = "3px yellow solid";
+            div3.src = img3.src;
+        }
+        function showBig4(){
+            var div3 = document.getElementById('bigpic');
+            var img4 = document.getElementById('smallpic').children[3];
+            img4.style.border = "3px yellow solid";
+            div3.src = img4.src;
+        }
+        function showBig5(){
+            var div3 = document.getElementById('bigpic');
+            var img5 = document.getElementById('smallpic').children[4];
+            img5.style.border = "3px yellow solid";
+            div3.src = img5.src;
+        }
     </script>
     
 </head>
@@ -50,11 +65,11 @@
 <body>
     <div id="main">
         <div id="smallpic">
-            <img src="images/s2.jpg" width="180" height="100" onclick="showBig()" />
-            <img src="images/s3.jpg" width="180" height="100" onclick="showBig()" />
-            <img src="images/s4.jpg" width="180" height="100" onclick="showBig()"/>
-            <img src="images/s5.jpg" width="180" height="100" onclick="showBig()"/>
-            <img src="images/s6.jpg" width="180" height="100" onclick="showBig()"/>
+            <img src="images/s2.jpg" width="180" height="100" onclick="showBig1()" />
+            <img src="images/s3.jpg" width="180" height="100" onclick="showBig2()" />
+            <img src="images/s4.jpg" width="180" height="100" onclick="showBig3()"/>
+            <img src="images/s5.jpg" width="180" height="100" onclick="showBig4()"/>
+            <img src="images/s6.jpg" width="180" height="100" onclick="showBig5()"/>
         </div>
         <div >
             <img id="bigpic" src="images/s1.jpg" width="940px" />
