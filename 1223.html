@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户注册</title>
+	<meta charset="utf-8"/>
+	<script src="jquery-3.2.1.slim.min.js"></script>
+	<style type="text/css">
+		div {
+			float: left;
+		}
+		p#submit {
+			clear: left;
+		}
+		span {
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#username").blur(function(){
+				if($("#username").val() == ''){
+					$("#one").append('<span>请输入用户名！</span>');
+				}
+			});
+
+			$("#passwd").blur(function(){
+				if($("#passwd").val() == ''){
+					$("#two").append('<span>请输入密码！</span>');
+				}
+			});
+			$("#rePasswd").blur(function(){
+				if($("#rePasswd").val() == ''){
+					$("#three").append('<span>请重新输入密码！</span>');
+				}
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<form>
+		<table>
+			<tr id="one">
+				<td>用户名：</td>
+				<td><input type="text" id="username" name="username" /></td>
+			</tr>
+			<tr id="two">
+				<td>密码：</td>
+				<td><input type="password" id="passwd"</td>
+			</tr>
+			<tr id="three">
+				<td>确认密码：</td>
+				<td><input type="password" id="rePasswd"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="reset" id="reset" value="重设" />
+				<input id="submit" type="submit" value="提交" /></td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>

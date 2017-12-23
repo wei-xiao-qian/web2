@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQ表格奇数行背景颜色为灰色</title>
+	<meta charset="utf-8"/>
+	<script src="jquery-3.2.1.slim.min.js"></script>
+	<style type="text/css">
+		*{
+			font-size: 36px;
+		}
+		tr { 
+			height: 30px;
+		}
+	</style>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('tr:even').css("background-color","#cccccc");
+	})
+	</script>
+</head>
+<body>
+	<table width="1000px" border="1" id="tab">
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+		<tr><td>&nbsp;</td></tr>
+	</table>
+</body>
+</html>
