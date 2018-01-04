@@ -1,0 +1,149 @@
+* {
+	font-size:17px;
+	margin:0px;
+	padding:0px;
+	}
+#date{ 
+	position: absolute;
+	left: 24px;
+	top:20px;
+}
+#dateTimes{
+	height: 28px;
+	text-align: center;
+}
+#nav{
+	margin-top: 5px;
+	margin-left: 23px;
+	list-style:none;
+	line-height:45px;
+	}
+
+#nav a:link,#nav a:visited{
+	display:block;
+	width:159px;
+	color: #666;
+	text-align:center;
+	text-decoration:none;
+	background:#CCC;
+	}
+#nav a:hover{
+	color: #FFF;
+	text-decoration: none;
+	font-weight: bold;
+	background:#999;
+	}
+#nav ul{list-style: none;}
+	#nav li{
+	float:left;
+	width: 160px;
+	}
+#nav li ul li a:hover{
+	background:#C00;
+	}
+#nav li ul{
+	display:none;
+	}
+#nav li.subMenuShow ul{
+	display:block;
+	}
+#oned{
+	text-align: center;
+	margin:0 auto;
+	height:240px;
+	
+	white-space:nowrap; 
+	width:1350px;
+	overflow:hidden;
+}
+#inputt{
+	font-size: 12px;
+	margin-left: 43px;
+	width: 165px;
+	height: 35px;
+}
+#btn{
+	width: 80px;
+	height: 40px;
+	margin-left: 50px;
+	font-size: 17px;
+}
+#divTip1{
+	background-color:yellow;
+	display:none;
+	padding:5px;
+	position:absolute;
+}
+#toolTip{
+	font-weight:bold;
+}
+#twod{
+	position: absolute;
+	margin-left: 20px;
+	top:650px;
+	
+}
+#footer{
+	position: absolute;
+	top: 1220px;
+	width: 1350px; 
+	background-color: #bebebe;
+	font-size: 15px;
+	text-align: center;
+	font-family: 宋体;
+	color: #522a06;
+	height: 130px;
+	clear: both;
+	background-repeat: no-repeat;
+}
+#black{
+	height: 80px;
+}
+
+
+#zerod{
+	font-size: 25px;
+	font-style: italic;
+	font-weight: bold;
+	display: none;
+	padding-top: 15px;
+	text-align: center;
+	height: 45px;
+}
+#picScroll img{
+	width:600px;
+	height:300px;
+	margin-left:5px;
+}
+#picScroll{
+	margin:0 auto;
+	height:300px;
+	border:1px solid #C90;
+	white-space:nowrap; 
+	width:1320px;
+	overflow:hidden;
+}
+#right{
+	position: absolute;
+	top:715px;
+	left: 990px;
+	height: 490px;
+	font-size: 25px;
+	text-align: center;
+	font-family: 宋体;
+	color: #522a06;
+	width: 335px;
+}
+#user{
+	height: 30px;
+	width: 200px;
+}
+#pass{
+	height: 30px;
+	width: 200px;
+}
+#pingjia{
+	color: #522a06;
+	font-family: 宋体;
+	width:280px;
+}

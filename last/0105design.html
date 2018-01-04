@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>课程设计</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css0105.css">
+	<script type="text/javascript" src="js0105.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#zerod").fadeIn(3050);
+		});
+		$(document).ready(function(){
+			$("#user").mouseover(function(){
+				alert('请输入用户名');
+			});
+		});
+	</script>
+</head>
+<body>
+	<div id="oned">
+		<span id="date"><input type="text" id="dateTimes" value="" /></span>
+		<a href="#"><img src="images/601.jpg" width="260" height="230" id="pic601"></a>
+		<div id="divTip1">
+		  	<div id="toolTip">Custom Tooltip</div>
+		  		更多详细信息...
+		</div>
+			<a href="#"><img src="images/602.jpg" width="260" height="230"></a>
+			<a href="#"><img src="images/603.jpg" width="260" height="230"></a>
+			<a href="#"><img src="images/604.jpg" width="260" height="230"></a>
+			<a href="#"><img src="images/605.jpg" width="260" height="230"></a>
+	</div>
+	<div>
+	<ul id="nav">
+		<li><a  href="#">主页</a>
+			<ul>
+				<li><a href="#">歌单推荐</a></li>
+				<li><a href="#">新歌首发</a></li>
+				<li><a href="#">精彩推荐</a></li>
+			</ul>
+		</li>
+		<li><a href="#">我的音乐</a>
+			<ul>
+				<li><a href="#">歌单</a></li>
+				<li><a href="#">最新歌单</a></li>
+				<li><a href="#">我喜欢</a></li>
+			</ul>
+		</li>
+		<li><a href="#">歌手</a>
+			<ul>
+				<li><a href="#">内地</a></li>
+				<li><a href="#">港澳台</a></li>
+				<li><a href="#">英文</a></li>
+			</ul>
+		</li>
+		<li><a href="#">榜单</a>
+			<ul>
+				<li><a href="#">最热榜</a></li>
+				<li><a href="#">流行榜</a></li>
+				<li><a href="#">巅峰榜</a></li>
+			</ul>
+		</li>
+		<li><a href="#">MV</a>
+			<ul>
+				<li><a href="#">圣诞又至</a></li>
+				<li><a href="#">新年快乐</a></li>
+				<li><a href="#">Merry</a></li>
+			</ul>
+		</li>
+		<li><a href="#">VIP</a></li>
+		<li><input type="text" value="我在诗里看到了你" id="inputt"></li>
+		<li>&nbsp;&nbsp;<button id="btn">搜索</button></li>
+	</ul>
+	</div>
+	<div id="black"></div>
+	<div id="twod">
+		<div id="zerod">排行榜</div>
+		<span><img src="images/12.png">
+		<img src="images/13.png">
+		<img src="images/14.png">
+		<img src="images/15.png"></span>
+	</div>
+	<div id="picScroll">
+		<span id="picScroll1">
+			<img src="images/001.jpg" />
+			<img src="images/002.jpg" />
+			<img src="images/003.jpg" />
+			<img src="images/004.jpg" />
+			<img src="images/005.jpg" />
+		</span>
+		<span id="picScroll2"></span>
+	</div>
+	<div id="right">
+		<table bgcolor="#FAEBD7" width="330px">
+			<tr>
+				<td colspan="2" height="50px"><h1>登录与注册</h1></td>
+			</tr>
+			<tr>
+				<td height="80px">用户名:</td>
+				<td height="80px"><input type="text" name="username" id="user"></td>
+			</tr>
+			<tr>
+				<td height="80px">请输入密码：</td>
+				<td height="80px"><input type="password" id="pass"></td>
+			</tr>
+			<tr>
+				<td height="80px">请确认密码：</td>
+				<td height="80px"><input type="password" id="pass"></td>
+			</tr>
+			<tr><td colspan="2" height="50px"><button id="btn">登录</button><button id="btn">注册</button></td></tr>
+			<td colspan="2" height="80px"><input type="text" value="评价一下吧" id="pingjia"></td>
+		</table>
+	</div>
+
+	<div id="footer"><br/>
+		<p>|关于音乐&nbsp;|监督举报&nbsp;|广告服务&nbsp;|版权指引&nbsp;|客服服务&nbsp;|友情链接&nbsp;|推广服务</p>
+		<p>我们致力于推动网络正版音乐发展，相关版权合作请联系copyrights@kugou.com<br/></p>
+		<p>信息网络传播视听节目许可证193874<br/></p>
+		<p>Copyrights*&nbsp;2004-2018&nbsp;Allrights&nbsp;Reserved</p>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="utf-8">  
+<title>进度条效果</title>  
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>  
+<style type="text/css">  
+#progress   
+{  
+ background:white;  
+ height:20px;  
+ padding:2px;  
+ border:1px solid green;  
+ margin:2px;  
+}  
+#progress span   
+{  
+ background:green;  
+ height:16px;  
+ text-align:center;  
+ padding:1px;  
+ margin:1px;  
+ display:block;  
+ color:yellow;  
+ font-weight:bold;  
+ font-size:14px;  
+ width:0%;  
+}  
+</style>  
+<script type="text/javascript">   
+ var progress_node_id = "progress";   
+ function SetProgress(progress) {   
+  if (progress) {   
+   $("#" + progress_node_id + " > span").css("width", String(progress) + "%");   
+   $("#" + progress_node_id + " > span").html(String(progress) + "%");   
+  }   
+ }   
+ var i = 0;   
+ function doProgress() {   
+ if (i > 100) {   
+  alert("Progress Bar Finished!");   
+  return;   
+ }   
+ if (i <= 100) {   
+  setTimeout("doProgress()", 500);   
+  SetProgress(i);   
+  i++;   
+ }   
+ }   
+ $(document).ready(function() {   
+  doProgress();   
+ });   
+</script>  
+</head>  
+<body>  
+<h1>jQuery实现进度条效果代码</h1>  
+<p>原理就是使用 Javascript 控制 SPAN CSS 的宽度（以及其他的样式），刷新查看</p>  
+<div id="progress"><span></span></div>  
+</body>  
+</html>  -->
