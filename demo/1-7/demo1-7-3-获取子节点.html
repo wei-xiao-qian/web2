@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>获取子节点</title>
+	<script>
+		window.onload = function(){
+		var node0=document.getElementById('news').childNodes;
+		var node1=document.getElementById('news').children[0];
+		var node2=document.getElementById('news').firstChild;
+		var node3=document.getElementById('news').lastChild;
+		var node4=document.getElementById('news').children;
+		alert(node0.length);//2
+		alert(node1.innerHTML);//新闻动态<span id="time">2016-10-7</span>
+		alert(node2.innerHTML);//新闻动态<span id="time">2016-10-7</span>
+		alert(node3.innerHTML);//<li>国际新闻</li><li>国内新闻</li><li>娱乐新闻</li><li>体育新闻</li><li>军事新闻</li>
+		alert(node4[1].children.length);//5
+		}   // 注意下标是从0开始
+	</script>
+</head>
+<body><!--空格或回车都会对节点产生影响-->
+	<div id="news"><h1>新闻动态<span id="time">2016-10-7</span></h1><ul><li>国际新闻</li><li>国内新闻</li><li>娱乐新闻</li><li>体育新闻</li><li>军事新闻</li></ul></div>
+	
+</body>
+</html>

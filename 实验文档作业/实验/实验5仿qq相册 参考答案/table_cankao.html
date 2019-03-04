@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		*{
+			font-size: 36px;
+		}
+		tr{
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<table width="1000px" border="1">
+		<tr height="30px" onmouseover="onover(this)" onmouseout="out(this)">
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	<input type="button" name="" id="add" value="添加一行" style="margin-left:840px;"/>
+	<input type="button" name="" id="delete" value="删除一行" style="margin-left:840px;"/>
+</body>
+	<script type="text/javascript">
+		var table = document.getElementsByTagName("table");
+		/*var rows = document.getElementsByTagName("table")[0].getElementsByTagName("tr");*/
+		//添加行
+		document.getElementById("add").onclick = function(){
+			var tr = document.createElement("tr");
+			for(var i=0; i<12; i++){
+				var td = document.createElement("td");
+				tr.appendChild(td);
+			}
+			tr.setAttribute("onmouseover","onover(this)");
+			tr.setAttribute("onmouseout","out(this)");
+			table[0].appendChild(tr);
+		}
+		//删除行
+		document.getElementById("delete").onclick = function(){
+			var lasttr = document.getElementsByTagName("table")[0].lastChild;
+			lasttr.parentNode.removeChild(lasttr);
+		}
+		//高亮显示
+		function onover(which){
+       		which.style.background="#fff3f1";  	
+        }
+    	function out(which){
+        	which.style.background="white";
+        }
+	</script>
+</html>

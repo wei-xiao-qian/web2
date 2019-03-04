@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> New Document </title>
+    <meta charset="utf-8" />
+    <script src="js/jquery-3.2.1.slim.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            var dom=document.getElementById("cr");
+            var $cr=$(dom);   
+            $cr.click(function(){
+                if($cr.is(":checked")){
+                    alert("被选中了！");
+                }
+            })
+        });
+    </script>
+ </head>
+
+<body>
+    <form>
+        <input type="checkbox" name="checkbox" id="cr">复选框
+    </form>
+</body>
+</html>

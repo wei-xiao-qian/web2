@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>创建对象</title>
+	<meta charset="utf-8" />
+	<script type="text/javascript">
+		//定义对象
+		var obj=new Object( );
+		obj.name='lily';
+		obj.breed='husky';
+		obj.weight='60';
+		obj['name-boy'] = 'tom';
+		alert(obj['name-boy'])
+		obj.jump=function( ){
+			alert('跳跃');
+			console.log(this.name);
+		}
+
+
+		//定义对象
+		/*var dog = {
+			name : "Lili",
+			breed : "Husky",
+			weight : 60,
+
+			jump : function (){
+				alert("She is jumping");
+			}
+		}*/
+
+		document.write(typeof obj);
+		obj.jump();
+		//document.write(typeof dog);
+	</script>
+</head>
+<body>
+</body>
+</html>

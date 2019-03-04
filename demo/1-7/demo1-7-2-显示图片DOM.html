@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> 使用DOM实现文档操作 </title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			li {
+				float: left;
+				margin-left: 15px;
+				margin-bottom: 10px;
+			}
+			img {
+				display: block;
+				clear: left;
+			}
+		</style>
+	
+	  	<script type="text/javascript">			
+			function showPic(which) {
+				var source = which.href;	
+				var img = document.getElementById('imgPlace');
+				/*var img = document.getElementById('imgPlace');*/
+				img.src = source;   
+			}
+		</script>		
+	</head>
+	<body>
+	  	<h1>图片链接</h1>
+	  	<ul>
+			<li> 
+				<a href="images/1.jpg" onclick="showPic(this); return false;">金鱼</a> 
+				<!--onclick事件会优先于a标签默认跳转事件执行,return false会阻止a标签跳转事件的执行-->
+			</li>
+			<li> 
+				<a href="images/2.jpg" onclick="showPic(this); return false;">草原</a> 
+			</li>
+			<li> 
+				<a href="images/3.jpg" onclick="showPic(this); return false;">荷花</a> 
+			</li>
+			<li> 
+				<a href="images/4.jpg" onclick="showPic(this); return false;">森林</a> 
+			</li>
+	  	</ul>
+		<!-- 待显示图片的位置 -->
+		<img id="imgPlace" src="images/0.jpg" width="300px" height="200px" alt="图片占位符" />
+	</body>
+</html>

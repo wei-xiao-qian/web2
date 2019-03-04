@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>获取元素属性值</title>
+</head>
+<body>
+	<!--已知 <div id="main"><img src="logo.jpg" name="logo"/></div>,请分别列举通过BOM或DOM获取图片路径的方法,至少6种方法。-->
+
+	<div id="main"><img src="logo.jpg" name="logo"/></div>
+</body>
+<script>
+	console.log(window.document.images[0].src);
+	console.log(window.document.images['logo'].src);
+	console.log(window.document.logo.src);
+
+
+	console.log(document.getElementById('main').childNodes[0].src);
+	console.log(document.getElementById('main').firstChild.src);
+	console.log(document.getElementsByTagName('img')[0].getAttribute("src"));
+
+
+	console.log(document.getElementsByTagName('img').logo.src);
+	console.log(document.getElementsByName("logo")[0].src);
+	console.log(document.getElementById('main').childNodes[0].getAttribute("src"));
+	console.log(document.getElementById('main').getElementsByTagName("img")[0].src);
+
+	</script>
+</html>

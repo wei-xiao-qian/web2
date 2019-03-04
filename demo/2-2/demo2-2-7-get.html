@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> New Document </title>
+    <meta name="Generator" content="EditPlus">
+    <meta charset="utf-8" />
+    <script src="js/jquery-3.2.1.slim.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            var $cr=$("#cr");
+            var cr=$cr[0];
+            $cr.click(function(){
+            if(cr.checked){
+         alert("被选中了！");
+        }
+       })
+    })
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="checkbox" name="checkbox" id="cr">复选框
+    </form>
+</body>
+</html>

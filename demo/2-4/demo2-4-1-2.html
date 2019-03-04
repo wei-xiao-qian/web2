@@ -1,0 +1,28 @@
+﻿<html>
+<head>
+	<title>用户注册</title>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+			    alert("Text: " + $("#test").text());
+			});
+
+			$("#btn2").click(function(){
+			    alert("HTML: " + $("#test").html());
+			});
+
+  			$("#btn3").click(function(){
+    			$(":text").val("Hello Kitty");
+  			});
+		});
+	</script>
+</head>
+<body>
+	<p id="test">这是段落中的<b>粗体</b>文本。</p>
+	<p>Name: <input type="text" name="user" value="Hello World" /></p>
+	<button id="btn1">显示文本</button>
+	<button id="btn2">显示 HTML</button>
+	<button id="btn3">改变文本域的值</button>
+</body>
+</html>

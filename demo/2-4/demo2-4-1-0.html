@@ -1,0 +1,38 @@
+﻿<html>
+<head>
+	<title>append()</title>
+	<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+  			$("#btn1").click(function(){
+    			$("p").append(" <b>在被选元素的结尾插入内容</b>.");
+  			});
+
+  			$("#btn2").click(function(){
+    			$("ol").prepend("<li>在被选元素的开头插入内容</li>");
+  			});
+
+  			$("#btn3").click(function(){
+    			$("ol").before("<p>之前</p>");
+  			});
+
+  			$("#btn4").click(function(){
+    			$("ol").after("<p>之后</p>");
+  			});
+		});
+	</script>
+</head>
+<body>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+	<ol>
+		<li>List item 1</li>
+		<li>List item 2</li>
+		<li>List item 3</li>
+	</ol>
+	<button id="btn1">追加文本</button>
+	<button id="btn2">追加列表项</button>
+	<button id="btn3">在被选元素之前插入内容</button>
+	<button id="btn4">在被选元素之后插入内容</button>
+</body>
+</html>

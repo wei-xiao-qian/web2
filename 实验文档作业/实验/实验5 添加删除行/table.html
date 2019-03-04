@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		*{
+			font-size: 36px;
+		}
+		tr{
+			height: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var tr = document.getElementsByTagName('tr');
+			for(var i = 0;i<tr.length;i++){
+				Newcolor(tr[i]);
+			}
+		}
+		function Newcolor(mtr){
+			mtr.onmouseover = function(){
+				mtr.style.backgroundColor = "#ADD8E6";
+			}
+			mtr.onmouseout = function(){
+				mtr.style.backgroundColor = "white";
+			}
+		}
+		function Addline(){
+			var trn = document.createElement("tr");
+			var tab  = document.getElementById("ta");
+			var tdn1 = document.createElement("td");
+			var tdn2 = document.createElement("td");
+			var tdn3 = document.createElement("td");
+			var tdn4 = document.createElement("td");
+			var tdn5 = document.createElement("td");
+			var tdn6 = document.createElement("td");
+			var tdn7 = document.createElement("td");
+			var tdn8 = document.createElement("td");
+			var tdn9 = document.createElement("td");
+			var tdn10 = document.createElement("td");
+			var tdn11 = document.createElement("td");
+			var tdn12 = document.createElement("td");
+			trn.appendChild(tdn1);
+			trn.appendChild(tdn2);
+			trn.appendChild(tdn3);
+			trn.appendChild(tdn4);
+			trn.appendChild(tdn5);
+			trn.appendChild(tdn6);
+			trn.appendChild(tdn7);
+			trn.appendChild(tdn8);
+			trn.appendChild(tdn9);
+			trn.appendChild(tdn10);
+			trn.appendChild(tdn11);
+			trn.appendChild(tdn12);
+			tab.appendChild(trn);
+			Newcolor(trn);
+
+		}
+		function Deleline(){     
+ 			var a=document.getElementById('ta').firstChild;  
+        	a.parentNode.removeChild(a);
+     }
+     </script>
+</head>
+<body>
+	<table width="1000px" border="1" id="ta">
+		<tr height="30px" id="trr">
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	<input type="button" name="" id="add" value="添加一行" onclick="Addline()" style="margin-left:840px;"/>
+	<input type="button" name="" id="delete" value="删除一行" onclick="Deleline()" style="margin-left:840px;"/>
+</body>
+</html>

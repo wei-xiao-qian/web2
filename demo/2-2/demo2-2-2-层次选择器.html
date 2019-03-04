@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script>
+        $(function(){
+            $("form>input").css("border", "2px dotted blue");
+        });
+    </script>
+    <style>
+        body { font-size:14px; }
+        form { 
+            border:2px green solid; 
+            padding:2px; 
+  		    margin:0; 
+            background:#efe; 
+        }
+        div { color:red; }
+        fieldset { 
+            margin:1px; 
+            padding:3px; 
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div>表单被绿色的轮廓包围着</div>
+        <label>Child:</label>
+        <input name="name" />
+        <fieldset>
+            <label>Grandchild:</label>
+            <input name="newsletter" />
+        </fieldset>
+    </form>
+    Sibling to form: <input name="none" />
+</body>
+</html>

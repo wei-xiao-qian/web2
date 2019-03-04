@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> New Document </title>
+    <script>
+        function init() {
+            var mydiv = document.getElementById("myDiv");
+            mydiv.style.border = "red 3px solid";
+        }
+    </script>
+    <style>
+        div {
+            width: 90px;
+            height: 90px;
+            float: left;
+            padding: 5px;
+            margin: 5px;
+            background-color: #EEEEEE;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div id="notMe">
+        <p>id="notMe"</p>
+    </div>
+    <div id="myDiv">
+        id="myDiv"
+    </div>
+</body>
+</html>
