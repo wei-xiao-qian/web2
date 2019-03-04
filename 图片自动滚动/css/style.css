@@ -1,0 +1,18 @@
+*{
+	margin:auto;
+}
+div{
+	overflow: hidden;
+	width: 600px;
+	white-space:nowrap;//设置文本不换行
+	
+}
+#picScroll1{
+	float: left;
+}
+#picScroll2{
+	float: left;
+}
+img{
+	width: 250px;
+}

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+  	<title>图片自动滚动</title>
+  	<meta charset="utf-8"/>
+  	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+  	<script type="text/javascript" src="js/autochange.js"></script>
+</head>
+
+<body>
+	<div id="picScroll" onmouseover="clearInterval(MyChange)" onmouseout="MyChange=setInterval(ChangeToLeft,10)">
+		<span id="picScroll1">
+			<img src="images/1.jpg" />
+			<img src="images/2.jpg" />
+			<img src="images/3.jpg" />
+			<img src="images/4.jpg" />
+			<img src="images/5.jpg" />
+			<img src="images/6.jpg" />
+			<img src="images/7.jpg" />
+			<img src="images/8.jpg" />
+		</span>
+		<span id="picScroll2"></span>
+ 	</div> 
+</body>
+</html>

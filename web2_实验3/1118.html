@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<div id="top">
+	宝贝与描述相符（打分匿名）
+</div>
+<div id="star">
+	<img src="images/star0.png" onmouseover="starPic(1)" onmouseout="hide(1)" onclick="qd(1)">&nbsp;<img src="images/star0.png" onmouseover="starPic(2)" onmouseout="hide(2)" onclick="qd(2)">&nbsp;<img src="images/star0.png" onmouseover="starPic(3)" onmouseout="hide(3)" onclick="qd(3)">&nbsp;<img src="images/star0.png" onmouseover="starPic(4)" onmouseout="hide(4)" onclick="qd(4)">&nbsp;<img src="images/star0.png" onmouseover="starPic(5)" onmouseout="hide(5)" onclick="qd(5)">
+</div>
+<div id="comment">
+	<textarea rows="20" cols="49" id="word"></textarea><br/>
+	<button type="button" class="but" >公开评论<img src="images/sanjiao.png"></button>
+</div>
+</body>
+<script type="text/javascript">
+	var com=["很差","差","一般","好","很好"];
+	var stars=document.getElementsByTagName('img');
+	var con=false;
+	var se=0;
+	function starPic(id){
+		if(id<=2){
+		for(var i=0;i<id;i++)
+		{
+			stars[i].src="images/star1.png";
+		}
+		}
+		else if(id>2){
+			for(var j=0;j<id;j++){
+				stars[j].src="images/star2.png";
+			}
+		}
+		document.getElementById('word').value=com[id-1];
+	}
+	function hide(id){
+		if(con==false){
+			for(var k=0;k<id;k++)
+			{
+				stars[k].src="images/star0.png";
+			}
+			document.getElementById('word').value="";
+		}
+	}
+	function qd(id){
+		if(id<=2){
+		for(var i=0;i<id;i++)
+		{
+			stars[i].src="images/star1.png";
+		}
+		}
+		else if(id>2){
+			for(var j=0;j<id;j++){
+				stars[j].src="images/star2.png";
+			}
+		}
+		document.getElementById('word').value=com[id-1];
+		con=true;
+	}
+</script>
+</html>
